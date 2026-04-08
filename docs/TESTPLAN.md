@@ -1,0 +1,19 @@
+# Test Plan for Account Management System
+
+This test plan covers the business logic implemented in the legacy Cobol application. It is intended for validation with business stakeholders and will serve as the basis for future unit and integration tests in the Node.js modernization.
+
+| Test Case ID | Test Case Description                | Pre-conditions                | Test Steps                                                                                                                                         | Expected Result                                         | Actual Result | Status (Pass/Fail) | Comments |
+|--------------|--------------------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|---------------|--------------------|----------|
+| TC-01        | View current account balance         | Application started           | 1. Select option 1 (View Balance) from the main menu.                                                                                              | Current balance is displayed (default: 1000.00).        |               |                    |          |
+| TC-02        | Credit account with valid amount     | Application started           | 1. Select option 2 (Credit Account).<br>2. Enter a valid credit amount (e.g., 200.00).                                                            | Amount is added to balance. New balance is displayed.   |               |                    |          |
+| TC-03        | Debit account with valid amount      | Application started, balance >= debit amount | 1. Select option 3 (Debit Account).<br>2. Enter a valid debit amount less than or equal to current balance (e.g., 100.00).         | Amount is subtracted from balance. New balance shown.   |               |                    |          |
+| TC-04        | Debit account with insufficient funds| Application started, balance < debit amount | 1. Select option 3 (Debit Account).<br>2. Enter a debit amount greater than current balance (e.g., 2000.00).                      | Error message: "Insufficient funds for this debit."    |               |                    |          |
+| TC-05        | Exit application                    | Application started           | 1. Select option 4 (Exit) from the main menu.                                                                                                   | Application exits with goodbye message.                 |               |                    |          |
+| TC-06        | Invalid menu option                 | Application started           | 1. Enter an invalid menu option (e.g., 5 or a letter).                                                                                           | Error message: "Invalid choice, please select 1-4."    |               |                    |          |
+| TC-07        | Data persistence after credit       | Application started           | 1. Credit account with a valid amount.<br>2. View balance.                                                                                        | New balance reflects credited amount.                   |               |                    |          |
+| TC-08        | Data persistence after debit        | Application started, balance >= debit amount | 1. Debit account with a valid amount.<br>2. View balance.                                                                 | New balance reflects debited amount.                    |               |                    |          |
+
+**Note:**
+- The initial balance is 1000.00.
+- Data persistence is simulated in-memory in the Cobol app; in Node.js, persistence may differ.
+- Actual Result, Status, and Comments are to be filled during test execution.
