@@ -1,0 +1,30 @@
+{
+  "name": "skills-modernize-your-legacy-code-with-github-copilot",
+  "version": "1.0.0",
+  "description": "<img src=\"https://octodex.github.com/images/Professortocat_v2.png\" align=\"right\" height=\"200px\" />",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npx jest src/accounting"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinaze/skills-modernize-your-legacy-code-with-github-copilot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sinaze/skills-modernize-your-legacy-code-with-github-copilot/issues"
+  },
+  "homepage": "https://github.com/sinaze/skills-modernize-your-legacy-code-with-github-copilot#readme",
+  "dependencies": {
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}

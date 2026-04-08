@@ -1,0 +1,12 @@
+{
+  "name": "accounting",
+  "version": "1.0.0",
+  "description": "Modernized Node.js version of legacy COBOL accounting app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
